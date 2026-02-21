@@ -1,5 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.UI;
 
 public class LightManager : MonoBehaviour
@@ -15,8 +17,17 @@ public class LightManager : MonoBehaviour
     [SerializeField] private GameObject RedLampInside;
     [SerializeField] private float GreenCost;
     [SerializeField] private float RedCost;
+
+    [Header("Bars")]
     public Image GreenNeonBar;
     public Image RedNeonBar;
+    public GameObject GreenBarFrameOn;
+    public GameObject GreenBarFrameOff;
+    public GameObject RedBarFrameOn;
+    public GameObject RedBarFrameOff;
+    public GameObject FlashlightOn;
+    public GameObject FlashlightOff;
+    
 
     public float GreenNeonAmount;
     public float RedNeonAmount;
@@ -36,14 +47,15 @@ public class LightManager : MonoBehaviour
     {
         Dependencies.Instance.RegisterDependency<LightManager>(this);
         CurrentLight = LightType.Normal;
+        SwapLight(CurrentLight);
         //FullLightInsideHeight = GreenLampInside.transform.position.y;
-      
-      
-
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void SwapLight(LightType lightType)
     {
+        ResetBarFrames();
         switch (lightType)
         {
             case LightType.Normal:
@@ -52,6 +64,8 @@ public class LightManager : MonoBehaviour
                 GreenNeon.enabled = false;
                 RedNeon.enabled = false;
                 RedNeonBeam.enabled = false;
+                FlashlightOn.SetActive(true);
+                FlashlightOff.SetActive(false);
                 break;
             case LightType.GreenNeon:
                 CurrentLight = LightType.GreenNeon;
@@ -59,6 +73,8 @@ public class LightManager : MonoBehaviour
                 RedNeon.enabled = false;
                 RedNeonBeam.enabled = false;
                 NormalLight.enabled = false;
+                GreenBarFrameOn.SetActive(true);
+                GreenBarFrameOff.SetActive(false);
                 break;
             case LightType.RedNeon:
                 CurrentLight = LightType.RedNeon;
@@ -66,6 +82,8 @@ public class LightManager : MonoBehaviour
                 RedNeonBeam.enabled = true;
                 NormalLight.enabled = false;
                 GreenNeon.enabled = false;
+                RedBarFrameOn.SetActive(true);
+                RedBarFrameOff.SetActive(false);
                 break;
         }
     }
@@ -144,5 +162,15 @@ public class LightManager : MonoBehaviour
     {
         GreenNeonBar.fillAmount = GreenNeonAmount;
         RedNeonBar.fillAmount = RedNeonAmount;
+    }
+
+    public void ResetBarFrames()
+    {
+        FlashlightOff.SetActive(true);
+        FlashlightOn.SetActive(false);
+        GreenBarFrameOff.SetActive(true);
+        GreenBarFrameOn.SetActive(false);
+        RedBarFrameOff.SetActive(true);
+        RedBarFrameOn.SetActive(false);
     }
 }
