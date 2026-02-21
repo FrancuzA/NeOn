@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4057189990351631177}
   - component: {fileID: 3526664042867133051}
   - component: {fileID: 3080235950131488104}
+  - component: {fileID: -3381499761382132044}
   m_Layer: 3
   m_Name: MinionGreen
   m_TagString: GreenEnemy
@@ -130,6 +131,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SplineFollow
   waypoints: []
   speed: 3
+  GhostSoundRef:
+    Guid:
+      Data1: -716727491
+      Data2: 1090145996
+      Data3: 1486258580
+      Data4: -596622928
+    Path: event:/RandomGhostSound
+--- !u!54 &-3381499761382132044
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4746613962481130149}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8716142586485685106
 GameObject:
   m_ObjectHideFlags: 0

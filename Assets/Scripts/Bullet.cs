@@ -1,11 +1,21 @@
+using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
     private Player _player;
     private LightManager lightManager;
+    public EventReference bulletSound;
+    private EventInstance bulletSoundInstance;
 
-
+    private void OnEnable()
+    {
+        bulletSoundInstance = RuntimeManager.CreateInstance(bulletSound);
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(bulletSoundInstance, this.gameObject, this.GetComponent<Rigidbody>());
+        bulletSoundInstance.start();
+        bulletSoundInstance.release();
+    }
     private void Start()
     {
         _player = Dependencies.Instance.GetDependancy<Player>();
@@ -35,5 +45,10 @@ public class Bullet : MonoBehaviour
         }
 
         else { Destroy(gameObject); }
+    }
+
+    private void OnDestroy()
+    {
+        bulletSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 }

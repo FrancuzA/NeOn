@@ -1,16 +1,22 @@
+using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public EventReference musicRef;
+    private EventInstance musicInstance;
+
+
+    private void Start()
     {
-        
+        musicInstance = RuntimeManager.CreateInstance(musicRef);
+        musicInstance.start();
+        musicInstance.release();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDestroy()
     {
-        
+        musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 }

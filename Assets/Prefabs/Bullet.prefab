@@ -155,3 +155,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 410fe758c06cf7d43afc0432d9059294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
+  bulletSound:
+    Guid:
+      Data1: 327716171
+      Data2: 1276136472
+      Data3: -1047883636
+      Data4: 232493566
+    Path: event:/Laser
