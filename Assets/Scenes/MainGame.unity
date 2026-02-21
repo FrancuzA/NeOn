@@ -3258,12 +3258,23 @@ MonoBehaviour:
   GreenNeon: {fileID: 1274159780}
   RedNeon: {fileID: 1543968246}
   RedNeonBeam: {fileID: 672972578}
+  GreenLamp: {fileID: 1010845074}
+  GreenLampInside: {fileID: 1010845073}
+  RedLamp: {fileID: 0}
+  RedLampInside: {fileID: 0}
   GreenCost: 0.0003
   RedCost: 0.0005
   GreenNeonBar: {fileID: 1894892397}
   RedNeonBar: {fileID: 1215302555}
+  GreenBarFrameOn: {fileID: 1574463475}
+  GreenBarFrameOff: {fileID: 1245478794}
+  RedBarFrameOn: {fileID: 634133620}
+  RedBarFrameOff: {fileID: 1037204808}
+  FlashlightOn: {fileID: 908387484}
+  FlashlightOff: {fileID: 1934522685}
   GreenNeonAmount: 1
   RedNeonAmount: 1
+  EmptyLightInsideHeight: 0
   CurrentLight: 0
 --- !u!4 &873918625
 Transform:
@@ -4094,6 +4105,78 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983915079}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1010845072
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1444438860}
+    m_Modifications:
+    - target: {fileID: 1232061890068470493, guid: fcec124c0acf8f840b6dfe958223a8a2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232061890068470493, guid: fcec124c0acf8f840b6dfe958223a8a2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.8259482
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232061890068470493, guid: fcec124c0acf8f840b6dfe958223a8a2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232061890068470493, guid: fcec124c0acf8f840b6dfe958223a8a2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.83488816
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232061890068470493, guid: fcec124c0acf8f840b6dfe958223a8a2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.16311762
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232061890068470493, guid: fcec124c0acf8f840b6dfe958223a8a2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.51593935
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232061890068470493, guid: fcec124c0acf8f840b6dfe958223a8a2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.10080247
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232061890068470493, guid: fcec124c0acf8f840b6dfe958223a8a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 22.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232061890068470493, guid: fcec124c0acf8f840b6dfe958223a8a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -63.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232061890068470493, guid: fcec124c0acf8f840b6dfe958223a8a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397744883043323269, guid: fcec124c0acf8f840b6dfe958223a8a2, type: 3}
+      propertyPath: m_Name
+      value: GreenLamp
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fcec124c0acf8f840b6dfe958223a8a2, type: 3}
+--- !u!1 &1010845073 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7316471555562442396, guid: fcec124c0acf8f840b6dfe958223a8a2, type: 3}
+  m_PrefabInstance: {fileID: 1010845072}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1010845074 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3397744883043323269, guid: fcec124c0acf8f840b6dfe958223a8a2, type: 3}
+  m_PrefabInstance: {fileID: 1010845072}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1010845075 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1232061890068470493, guid: fcec124c0acf8f840b6dfe958223a8a2, type: 3}
+  m_PrefabInstance: {fileID: 1010845072}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1037204808
 GameObject:
   m_ObjectHideFlags: 0
@@ -4151,7 +4234,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bbcfbae5c7c56374c9be79e2d6b47750, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d2b68e7f5c13f5647920984b4c2fe727, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4936,7 +5019,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4d30b1b9c94d9ff4eb91b324c22f6098, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fab7746cc3b020e45b0b05f55a266fe6, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -5655,6 +5738,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1010845075}
   - {fileID: 873918625}
   - {fileID: 828473957}
   - {fileID: 1503397282}
@@ -8521,7 +8605,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a7127020d9514314c9f3e4318f0d3c4b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f1d174a1e4c48bb44a100e439f968648, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
