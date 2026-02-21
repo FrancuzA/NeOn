@@ -5,8 +5,11 @@ using UnityEngine.Rendering.HighDefinition;
 public class DecalsManager : MonoBehaviour
 {
     [Header("Ustawienia raycasta")]
-    [SerializeField] private float rayLength = 100f;          
-    [SerializeField] private LayerMask hitLayers = ~0;    
+    [SerializeField] private float rayLength = 50f;          
+    [SerializeField] private LayerMask hitLayers = ~0;
+    private const string RED_ENEMY_STRING = "RedEnemy";
+    private const string GREEN_ENEMY_STRING = "GreenEnemy";
+
 
     public Camera mainCamera;
     public GameObject Decal;
@@ -64,24 +67,32 @@ public class DecalsManager : MonoBehaviour
 
             Decal.transform.rotation = Quaternion.LookRotation(directionToTarget);
            
-
+            
             string CurrentEnemy = playerHit.collider.tag;
             string CurrentLight = Dependencies.Instance.GetDependancy<LightManager>().CurrentLight.ToString();
             Decal.transform.position = playerHit.point;
             switch (CurrentEnemy)
             {
-                case "GreenEnemy":
+                case GREEN_ENEMY_STRING:
                     if(CurrentLight == "GreenNeon") Decal.SetActive(true);
                     Decal.GetComponent<DecalProjector>().material = DecalColors[0];
                     break;
-                case "RedEnemy":
-                    if (CurrentLight == "RedNeon") Decal.SetActive(true);
+                case RED_ENEMY_STRING:
+                    if (CurrentLight == "RedNeon")
+                    {
+                        Decal.SetActive(true);
+
+
+                    }
+
                     Decal.GetComponent<DecalProjector>().material = DecalColors[1];
                     break;
                 case "NonEnemy":
                     Debug.Log("non enemy hit");
                     break;
+
             }
+
 
         }
         else

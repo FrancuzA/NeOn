@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     public GameObject DeathScreen;
     public List<GameObject> Hearts;
 
-    public void Start()
+    public void Awake()
     {
         Time.timeScale = 1;
         Dependencies.Instance.RegisterDependency<Player>(this);
