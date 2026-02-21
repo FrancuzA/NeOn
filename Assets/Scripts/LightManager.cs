@@ -6,6 +6,7 @@ public class LightManager : MonoBehaviour
     [SerializeField] private Light NormalLight;
     [SerializeField] private Light GreenNeon;
     [SerializeField] private Light RedNeon;
+    private Player _player;
     public enum LightType
     {
         Normal,
@@ -17,6 +18,8 @@ public class LightManager : MonoBehaviour
 
     private void Start()
     {
+        Dependencies.Instance.RegisterDependency<LightManager>(this);
+        _player = Dependencies.Instance.GetDependancy<Player>();
         CurrentLight = LightType.Normal;
     }
 
@@ -50,13 +53,28 @@ public class LightManager : MonoBehaviour
         {
             SwapLight(LightType.Normal);
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        else if (Input.GetKeyDown(KeyCode.Alpha2) && _player.GreenNeonAmount >0)
         {
             SwapLight(LightType.GreenNeon);
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        else if (Input.GetKeyDown(KeyCode.Alpha3) && _player.RedNeonAmount >0)
         {
             SwapLight(LightType.RedNeon);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        switch (CurrentLight)
+        {
+            case LightType.GreenNeon:
+                if (_player.GreenNeonAmount <= 0) SwapLight(LightType.Normal);
+                _player.DrainNeon("Green", 0.0001f);
+                break;
+            case LightType.RedNeon:
+                if (_player.RedNeonAmount <= 0) SwapLight(LightType.Normal);
+                _player.DrainNeon("Red", 0.0001f);
+                break;
         }
     }
 }

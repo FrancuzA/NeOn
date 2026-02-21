@@ -12,7 +12,7 @@ public class MinionManager : MonoBehaviour
     }
 
     public List<MinionEntry> minionPool;
-    public SpawnPoint[] allSpawners;
+    public List<GameObject> allSpawners;
     public float spawnInterval = 2f;
     public int maxMinions = 20;
 
@@ -41,15 +41,16 @@ public class MinionManager : MonoBehaviour
 
     void SpawnFromRandomPoint()
     {
-        if (allSpawners.Length == 0 || minionPool.Count == 0) return;
+        if (allSpawners.Count == 0 || minionPool.Count == 0) return;
 
         GameObject selectedPrefab = GetRandomMinionPrefab();
         if (selectedPrefab == null) return;
 
-        int randomIndex = Random.Range(0, allSpawners.Length);
-        SpawnPoint selectedSpawner = allSpawners[randomIndex];
+        int randomIndex = Random.Range(0, allSpawners.Count);
+       GameObject selectedSpawner = allSpawners[randomIndex];
 
-        GameObject newMinion = Instantiate(selectedPrefab, selectedSpawner.transform.position, selectedSpawner.transform.rotation);
+        GameObject newMinion = Instantiate(selectedPrefab, selectedSpawner.transform.position, Quaternion.identity);
+        newMinion.GetComponent<SplineFollow>().waypoints = selectedSpawner.GetComponent<SpawnPoint>().waypoints;
         activeMinions.Add(newMinion);
     }
 

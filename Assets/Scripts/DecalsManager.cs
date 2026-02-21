@@ -10,6 +10,7 @@ public class DecalsManager : MonoBehaviour
 
     public Camera mainCamera;
     public GameObject Decal;
+    public GameObject Neons;
     public List<Material> DecalColors;
 
 
@@ -24,6 +25,7 @@ public class DecalsManager : MonoBehaviour
     private void Update()
     {
        PerformRaycast();
+        
     }
 
     private void PerformRaycast()
@@ -53,7 +55,7 @@ public class DecalsManager : MonoBehaviour
         }
 
         Vector3 directionToTarget = (targetPoint - playerTransform.position).normalized;
-
+        Neons.transform.rotation = Quaternion.LookRotation(directionToTarget);
         RaycastHit playerHit;
         if (Physics.Raycast(playerTransform.position, directionToTarget, out playerHit, rayLength, hitLayers))
         {
@@ -61,17 +63,23 @@ public class DecalsManager : MonoBehaviour
            
 
             Decal.transform.rotation = Quaternion.LookRotation(directionToTarget);
+           
 
-            Decal.SetActive(true);
             string CurrentEnemy = playerHit.collider.tag;
+            string CurrentLight = Dependencies.Instance.GetDependancy<LightManager>().CurrentLight.ToString();
             Decal.transform.position = playerHit.point;
             switch (CurrentEnemy)
             {
                 case "GreenEnemy":
+                    if(CurrentLight == "GreenNeon") Decal.SetActive(true);
                     Decal.GetComponent<DecalProjector>().material = DecalColors[0];
                     break;
                 case "RedEnemy":
+                    if (CurrentLight == "RedNeon") Decal.SetActive(true);
                     Decal.GetComponent<DecalProjector>().material = DecalColors[1];
+                    break;
+                case "NonEnemy":
+                    Debug.Log("non enemy hit");
                     break;
             }
 
@@ -86,4 +94,5 @@ public class DecalsManager : MonoBehaviour
              Vector3 rayEnd = playerTransform.position + directionToTarget * rayLength;
             Debug.DrawLine(playerTransform.position, rayEnd, Color.red, 2f);
     }
+
 }

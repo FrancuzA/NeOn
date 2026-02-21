@@ -1,16 +1,16 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SplineFollow : MonoBehaviour
 {
-    public Transform[] waypoints;
+    public List<Transform> waypoints = new List<Transform>();
     public float speed = 3f;
-    public bool loop = true;
 
     private int currentPointIndex = 0;
 
     void Update()
     {
-        if (waypoints.Length == 0) return;
+        if (waypoints.Count == 0) return;
 
         Transform targetPoint = waypoints[currentPointIndex];
 
@@ -21,10 +21,9 @@ public class SplineFollow : MonoBehaviour
         {
             currentPointIndex++;
 
-            if (currentPointIndex >= waypoints.Length)
+            if (currentPointIndex >= waypoints.Count)
             {
-                if (loop) currentPointIndex = 0;
-                else enabled = false;
+                Destroy(gameObject);
             }
         }
     }
