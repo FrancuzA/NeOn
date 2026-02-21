@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +9,10 @@ public class LightManager : MonoBehaviour
     [SerializeField] private Light GreenNeon;
     [SerializeField] private Light RedNeon;
     [SerializeField] private Light RedNeonBeam;
+    [SerializeField] private GameObject GreenLamp;
+    [SerializeField] private GameObject GreenLampInside;
+    [SerializeField] private GameObject RedLamp;
+    [SerializeField] private GameObject RedLampInside;
     [SerializeField] private float GreenCost;
     [SerializeField] private float RedCost;
     public Image GreenNeonBar;
@@ -15,6 +20,8 @@ public class LightManager : MonoBehaviour
 
     public float GreenNeonAmount;
     public float RedNeonAmount;
+    private float FullLightInsideHeight = 0;
+    [SerializeField] private float EmptyLightInsideHeight;
 
     public enum LightType
     {
@@ -29,6 +36,10 @@ public class LightManager : MonoBehaviour
     {
         Dependencies.Instance.RegisterDependency<LightManager>(this);
         CurrentLight = LightType.Normal;
+        //FullLightInsideHeight = GreenLampInside.transform.position.y;
+      
+      
+
     }
 
     public void SwapLight(LightType lightType)
@@ -96,12 +107,12 @@ public class LightManager : MonoBehaviour
             case "Green":
                 GreenNeonAmount -= amount;
                 if (GreenNeonAmount < 0) GreenNeonAmount = 0;
-                SetNeonSubstanceInLamp(GreenNeonAmount);
+                SetNeonSubstanceInLamp(GreenNeonAmount, GreenLampInside);
                 break;
             case "Red":
                 RedNeonAmount -= amount;
                 if (RedNeonAmount < 0) RedNeonAmount = 0;
-                SetNeonSubstanceInLamp(RedNeonAmount);
+               // SetNeonSubstanceInLamp(RedNeonAmount,RedLampInside);
                 break;
         }
         UpdateUI();
@@ -123,9 +134,10 @@ public class LightManager : MonoBehaviour
         UpdateUI();
     }
 
-    public void SetNeonSubstanceInLamp(float amount)
+    public void SetNeonSubstanceInLamp(float amount, GameObject lampInside)
     {
-
+       float newY = Mathf.Lerp(EmptyLightInsideHeight, FullLightInsideHeight, amount);
+       lampInside.transform.localPosition = new Vector3(0, newY, 0);
     }
 
     public void UpdateUI()
