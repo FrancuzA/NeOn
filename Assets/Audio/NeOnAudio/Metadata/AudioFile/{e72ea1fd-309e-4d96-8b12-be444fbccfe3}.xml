@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{e72ea1fd-309e-4d96-8b12-be444fbccfe3}">
+		<property name="assetPath">
+			<value>GhostSounds/GS_7.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.3324263038548754</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1ccd5822-da1a-4b2a-aa95-ba3cfc745ea8}</destination>
+		</relationship>
+	</object>
+</objects>
