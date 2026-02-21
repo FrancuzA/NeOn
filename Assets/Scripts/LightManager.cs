@@ -6,6 +6,7 @@ public class LightManager : MonoBehaviour
     [SerializeField] private Light NormalLight;
     [SerializeField] private Light GreenNeon;
     [SerializeField] private Light RedNeon;
+    [SerializeField] private Light RedNeonBeam;
     [SerializeField] private float GreenCost;
     [SerializeField] private float RedCost;
     private Player _player;
@@ -34,16 +35,19 @@ public class LightManager : MonoBehaviour
                 NormalLight.enabled = true;
                 GreenNeon.enabled = false;
                 RedNeon.enabled = false;
+                RedNeonBeam.enabled = false;
                 break;
             case LightType.GreenNeon:
                 CurrentLight = LightType.GreenNeon;
                 GreenNeon.enabled = true;
                 RedNeon.enabled = false;
+                RedNeonBeam.enabled = false;
                 NormalLight.enabled = false;
                 break;
             case LightType.RedNeon:
                 CurrentLight = LightType.RedNeon;
                 RedNeon.enabled = true;
+                RedNeonBeam.enabled = true;
                 NormalLight.enabled = false;
                 GreenNeon.enabled = false;
                 break;
