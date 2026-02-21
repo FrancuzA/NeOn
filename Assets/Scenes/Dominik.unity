@@ -3032,12 +3032,17 @@ MonoBehaviour:
   GreenNeon: {fileID: 1274159780}
   RedNeon: {fileID: 1543968246}
   RedNeonBeam: {fileID: 672972578}
+  GreenLamp: {fileID: 2038521211}
+  GreenLampInside: {fileID: 1222103027}
+  RedLamp: {fileID: 0}
+  RedLampInside: {fileID: 0}
   GreenCost: 0.0003
   RedCost: 0.0005
   GreenNeonBar: {fileID: 1894892397}
   RedNeonBar: {fileID: 1215302555}
   GreenNeonAmount: 1
   RedNeonAmount: 1
+  EmptyLightInsideHeight: -4.35
   CurrentLight: 0
 --- !u!4 &873918625
 Transform:
@@ -4389,6 +4394,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1215302553}
   m_CullTransparentMesh: 1
+--- !u!1 &1222103027 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7316471555562442396, guid: fcec124c0acf8f840b6dfe958223a8a2, type: 3}
+  m_PrefabInstance: {fileID: 1617385910708107364}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1230391919 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8076494827883460625, guid: fd98b889a60fb6d4cb45354b2cc403e1, type: 3}
@@ -8027,6 +8037,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2038521211 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3397744883043323269, guid: fcec124c0acf8f840b6dfe958223a8a2, type: 3}
+  m_PrefabInstance: {fileID: 1617385910708107364}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2057768365
 GameObject:
   m_ObjectHideFlags: 0
@@ -8463,7 +8478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3397744883043323269, guid: fcec124c0acf8f840b6dfe958223a8a2, type: 3}
       propertyPath: m_Name
-      value: Lamp
+      value: GreenLamp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
