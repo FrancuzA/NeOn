@@ -16,7 +16,6 @@ public class Shooting : MonoBehaviour
     {
         Timer += Time.fixedDeltaTime;
     }
-    // Update is called once per frame
     void Update()
     {
         Vector3 directionToTarget =  PerformRaycast();
