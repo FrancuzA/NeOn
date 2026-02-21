@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class LightManager : MonoBehaviour
 {
@@ -11,12 +12,15 @@ public class LightManager : MonoBehaviour
     [SerializeField] private Light GreenNeon;
     [SerializeField] private Light RedNeon;
     [SerializeField] private Light RedNeonBeam;
+    [SerializeField] private GameObject normalLamp;
     [SerializeField] private GameObject GreenLamp;
     [SerializeField] private GameObject GreenLampInside;
     [SerializeField] private GameObject RedLamp;
     [SerializeField] private GameObject RedLampInside;
     [SerializeField] private float GreenCost;
     [SerializeField] private float RedCost;
+
+    
 
     [Header("Bars")]
     public Image GreenNeonBar;
@@ -31,8 +35,11 @@ public class LightManager : MonoBehaviour
 
     public float GreenNeonAmount;
     public float RedNeonAmount;
+
     private float FullLightInsideHeight = 0;
     [SerializeField] private float EmptyLightInsideHeight;
+    private float LampInHandHeight = -2.825948f;
+    private float LampHideHeight = -9f;
 
     public enum LightType
     {
@@ -42,16 +49,20 @@ public class LightManager : MonoBehaviour
     }
 
     public LightType CurrentLight;
+    private GameObject currentLamp;
 
     private void Start()
     {
         Dependencies.Instance.RegisterDependency<LightManager>(this);
         CurrentLight = LightType.Normal;
+        currentLamp = normalLamp;
         SwapLight(CurrentLight);
-        //FullLightInsideHeight = GreenLampInside.transform.position.y;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        HideLamp(GreenLamp);
+        HideLamp(RedLamp);
     }
+    
 
     public void SwapLight(LightType lightType)
     {
@@ -66,6 +77,7 @@ public class LightManager : MonoBehaviour
                 RedNeonBeam.enabled = false;
                 FlashlightOn.SetActive(true);
                 FlashlightOff.SetActive(false);
+
                 break;
             case LightType.GreenNeon:
                 CurrentLight = LightType.GreenNeon;
@@ -92,14 +104,24 @@ public class LightManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             SwapLight(LightType.Normal);
+
+            HideLamp(currentLamp);
+            currentLamp = normalLamp;
+            ShowLamp(normalLamp);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2) && GreenNeonAmount >0)
         {
             SwapLight(LightType.GreenNeon);
+            HideLamp(currentLamp);
+            currentLamp = GreenLamp;
+            ShowLamp(GreenLamp);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3) && RedNeonAmount >0)
         {
             SwapLight(LightType.RedNeon);
+            HideLamp(currentLamp);
+            currentLamp = RedLamp;
+            ShowLamp(RedLamp);
         }
     }
 
@@ -124,13 +146,13 @@ public class LightManager : MonoBehaviour
         {
             case "Green":
                 GreenNeonAmount -= amount;
-                if (GreenNeonAmount < 0) GreenNeonAmount = 0;
+                if (GreenNeonAmount < 0) {GreenNeonAmount = 0; }
                 SetNeonSubstanceInLamp(GreenNeonAmount, GreenLampInside);
                 break;
             case "Red":
                 RedNeonAmount -= amount;
                 if (RedNeonAmount < 0) RedNeonAmount = 0;
-               // SetNeonSubstanceInLamp(RedNeonAmount,RedLampInside);
+                SetNeonSubstanceInLamp(RedNeonAmount,RedLampInside);
                 break;
         }
         UpdateUI();
@@ -172,5 +194,22 @@ public class LightManager : MonoBehaviour
         GreenBarFrameOn.SetActive(false);
         RedBarFrameOff.SetActive(true);
         RedBarFrameOn.SetActive(false);
+    }
+    public void HideLamp(GameObject lamp)
+    {
+        lamp.transform.DOKill();
+
+        Vector3 pos = lamp.transform.localPosition;
+        pos.y = LampHideHeight;
+        lamp.transform.localPosition = pos;
+        lamp.SetActive(false);
+    }
+
+
+    public void ShowLamp(GameObject lamp)
+    {
+        lamp.SetActive(true);
+        lamp.transform.DOKill();
+        lamp.transform.DOLocalMoveY(LampInHandHeight, 0.5f).SetEase(Ease.OutCubic);
     }
 }
