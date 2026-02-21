@@ -29,7 +29,8 @@ public class Shooting : MonoBehaviour
 
     public Vector3 PerformRaycast()
     {
-        Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
+        // Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
+        Ray cameraRay = mainCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         RaycastHit cameraHit;
         Vector3 targetPoint;
 
