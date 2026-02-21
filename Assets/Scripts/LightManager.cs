@@ -6,6 +6,8 @@ public class LightManager : MonoBehaviour
     [SerializeField] private Light NormalLight;
     [SerializeField] private Light GreenNeon;
     [SerializeField] private Light RedNeon;
+    [SerializeField] private float GreenCost;
+    [SerializeField] private float RedCost;
     private Player _player;
     public enum LightType
     {
@@ -69,11 +71,11 @@ public class LightManager : MonoBehaviour
         {
             case LightType.GreenNeon:
                 if (_player.GreenNeonAmount <= 0) SwapLight(LightType.Normal);
-                _player.DrainNeon("Green", 0.0001f);
+                _player.DrainNeon("Green", GreenCost);
                 break;
             case LightType.RedNeon:
                 if (_player.RedNeonAmount <= 0) SwapLight(LightType.Normal);
-                _player.DrainNeon("Red", 0.0001f);
+                _player.DrainNeon("Red", RedCost);
                 break;
         }
     }
