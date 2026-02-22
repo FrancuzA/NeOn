@@ -31,6 +31,8 @@ public class Player : MonoBehaviour
         if( Lifes == 0)
         {
             Time.timeScale = 0;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             DeathScreen.SetActive(true);
         }
     }
