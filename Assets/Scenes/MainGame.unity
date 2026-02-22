@@ -579,6 +579,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2523058887246834097, guid: 56926979d87f55642addead0f1aa2fdc, type: 3}
+      propertyPath: m_Range
+      value: 5.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 2523058887246834097, guid: 56926979d87f55642addead0f1aa2fdc, type: 3}
       propertyPath: m_Color.b
       value: 0.08771503
       objectReference: {fileID: 0}
@@ -597,6 +601,10 @@ PrefabInstance:
     - target: {fileID: 2523058887246834097, guid: 56926979d87f55642addead0f1aa2fdc, type: 3}
       propertyPath: m_RenderingLayerMask
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2523058887246834097, guid: 56926979d87f55642addead0f1aa2fdc, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 11.21
       objectReference: {fileID: 0}
     - target: {fileID: 7737474531783141447, guid: 56926979d87f55642addead0f1aa2fdc, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -1563,6 +1571,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2523058887246834097, guid: 56926979d87f55642addead0f1aa2fdc, type: 3}
+      propertyPath: m_Range
+      value: 5.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 2523058887246834097, guid: 56926979d87f55642addead0f1aa2fdc, type: 3}
       propertyPath: m_Color.g
       value: 0.67058825
       objectReference: {fileID: 0}
@@ -1577,6 +1589,10 @@ PrefabInstance:
     - target: {fileID: 2523058887246834097, guid: 56926979d87f55642addead0f1aa2fdc, type: 3}
       propertyPath: m_RenderingLayerMask
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2523058887246834097, guid: 56926979d87f55642addead0f1aa2fdc, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 11.21
       objectReference: {fileID: 0}
     - target: {fileID: 7737474531783141447, guid: 56926979d87f55642addead0f1aa2fdc, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -4173,7 +4189,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 91c701812e09cec48807acfb1137d69d, type: 2}
+  - {fileID: 2100000, guid: 904c1c2be8e4bc141b67a40fec041885, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4551,6 +4567,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2523058887246834097, guid: 56926979d87f55642addead0f1aa2fdc, type: 3}
+      propertyPath: m_Range
+      value: 5.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 2523058887246834097, guid: 56926979d87f55642addead0f1aa2fdc, type: 3}
       propertyPath: m_Color.b
       value: 0.61960787
       objectReference: {fileID: 0}
@@ -4569,6 +4589,10 @@ PrefabInstance:
     - target: {fileID: 2523058887246834097, guid: 56926979d87f55642addead0f1aa2fdc, type: 3}
       propertyPath: m_RenderingLayerMask
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2523058887246834097, guid: 56926979d87f55642addead0f1aa2fdc, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 11.21
       objectReference: {fileID: 0}
     - target: {fileID: 7737474531783141447, guid: 56926979d87f55642addead0f1aa2fdc, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -8454,12 +8478,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2523058887246834097, guid: 56926979d87f55642addead0f1aa2fdc, type: 3}
+      propertyPath: m_Range
+      value: 5.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 2523058887246834097, guid: 56926979d87f55642addead0f1aa2fdc, type: 3}
       propertyPath: m_Intensity
       value: 17.345276
       objectReference: {fileID: 0}
     - target: {fileID: 2523058887246834097, guid: 56926979d87f55642addead0f1aa2fdc, type: 3}
       propertyPath: m_RenderingLayerMask
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2523058887246834097, guid: 56926979d87f55642addead0f1aa2fdc, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 11.21
       objectReference: {fileID: 0}
     - target: {fileID: 7737474531783141447, guid: 56926979d87f55642addead0f1aa2fdc, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -8545,11 +8577,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MinionManager
   minionPool:
   - prefab: {fileID: 4746613962481130149, guid: cdbfd3cc15ad7e142b9938c53eb721d8, type: 3}
-    spawnChance: 21.4
+    spawnChance: 50.5
   - prefab: {fileID: 4746613962481130149, guid: 3fab2592bfa11b249bfc8949cf76701e, type: 3}
-    spawnChance: 20
+    spawnChance: 30.9
   - prefab: {fileID: 4746613962481130149, guid: d4772a9339c201c47bcec6fa313de25c, type: 3}
-    spawnChance: 67.3
+    spawnChance: 25.5
   allSpawners:
   - {fileID: 1755353997}
   - {fileID: 527197383}
@@ -8560,8 +8592,8 @@ MonoBehaviour:
   - {fileID: 791469579}
   - {fileID: 1870812541}
   - {fileID: 69623318}
-  spawnInterval: 5
-  maxMinions: 10
+  spawnInterval: 3
+  maxMinions: 20
 --- !u!4 &1664472846
 Transform:
   m_ObjectHideFlags: 0
@@ -11199,7 +11231,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 91c701812e09cec48807acfb1137d69d, type: 2}
+  - {fileID: 2100000, guid: 904c1c2be8e4bc141b67a40fec041885, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11391,7 +11423,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 4972eb7be693a684d9b48405b7ab32a2, type: 2}
     - target: {fileID: 1301065891273944815, guid: f2b652328df4f4b43bfc93c994ca64a0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2644294328390171346, guid: f2b652328df4f4b43bfc93c994ca64a0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2644294328390171346, guid: f2b652328df4f4b43bfc93c994ca64a0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2771050469068069308, guid: f2b652328df4f4b43bfc93c994ca64a0, type: 3}
       propertyPath: RedNeonBar
@@ -11445,6 +11485,10 @@ PrefabInstance:
       propertyPath: 'Hearts.Array.data[2]'
       value: 
       objectReference: {fileID: 1512376574}
+    - target: {fileID: 5792677556381907799, guid: f2b652328df4f4b43bfc93c994ca64a0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7505581488933623979, guid: f2b652328df4f4b43bfc93c994ca64a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -11484,6 +11528,14 @@ PrefabInstance:
     - target: {fileID: 7505581488933623979, guid: f2b652328df4f4b43bfc93c994ca64a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345563777076817504, guid: f2b652328df4f4b43bfc93c994ca64a0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345563777076817504, guid: f2b652328df4f4b43bfc93c994ca64a0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 9199806473243041882, guid: f2b652328df4f4b43bfc93c994ca64a0, type: 3}
       propertyPath: BulletPrefab
