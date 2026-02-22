@@ -23,7 +23,8 @@ public class Shooting : MonoBehaviour
         {
             Timer = 0;
             GameObject bulletShot = Instantiate(BulletPrefab, gameObject.transform.position, Quaternion.LookRotation(directionToTarget));
-            bulletShot.GetComponent<Rigidbody>().AddForce(bulletShot.transform.forward * shootingForce, ForceMode.Impulse);
+            bulletShot.transform.Rotate(new Vector3(90, 0, 0));
+            bulletShot.GetComponent<Rigidbody>().AddForce(bulletShot.transform.up * shootingForce, ForceMode.Impulse);
         }
     }
 
