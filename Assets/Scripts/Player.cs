@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
 
         if(Hearts.Count > 0)
         {
-           Destroy(Hearts[^1]);
+           Hearts.RemoveAt(Lifes);
         }
 
         if( Lifes == 0)
