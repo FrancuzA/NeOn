@@ -8689,11 +8689,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MinionManager
   minionPool:
   - prefab: {fileID: 4746613962481130149, guid: cdbfd3cc15ad7e142b9938c53eb721d8, type: 3}
-    spawnChance: 50.5
+    spawnChance: 50
   - prefab: {fileID: 4746613962481130149, guid: 3fab2592bfa11b249bfc8949cf76701e, type: 3}
-    spawnChance: 30.9
+    spawnChance: 25
   - prefab: {fileID: 4746613962481130149, guid: d4772a9339c201c47bcec6fa313de25c, type: 3}
-    spawnChance: 25.5
+    spawnChance: 25
   allSpawners:
   - {fileID: 1755353997}
   - {fileID: 527197383}
