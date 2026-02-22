@@ -797,6 +797,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7505581488933623979}
   - component: {fileID: 5348328732485620319}
+  - component: {fileID: 2900525943365825855}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -838,6 +839,20 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &2900525943365825855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3710165190942027714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 3710165190942027714}
 --- !u!1 &5063105588405126928
 GameObject:
   m_ObjectHideFlags: 0
@@ -1328,7 +1343,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7264840991989846091}
   - component: {fileID: 2374243113204019544}
-  - component: {fileID: 6302878269575107272}
   - component: {fileID: 6361932680724406768}
   - component: {fileID: 8860943414010553171}
   - component: {fileID: 9199806473243041882}
@@ -1412,14 +1426,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &6302878269575107272
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6930654013474953780}
-  m_Enabled: 1
 --- !u!114 &6361932680724406768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1587,13 +1593,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494eaf6a678024142bdc282434da1700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shooting
-  BulletPrefab: {fileID: 4653131317080969719, guid: f1c0bcdde8b4e7a458d5ad9fc9467a98, type: 3}
+  BulletPrefab: {fileID: 463188995746127493, guid: 1ab881619ae4d124aa43188a479ca41f, type: 3}
   Timer: 0
   mainCamera: {fileID: 2374243113204019544}
   hitLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  shootingForce: 50
+  shootingForce: 100
 --- !u!1 &7212801496202583313
 GameObject:
   m_ObjectHideFlags: 0

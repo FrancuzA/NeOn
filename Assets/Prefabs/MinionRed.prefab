@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3526664042867133051}
   - component: {fileID: 3080235950131488104}
   - component: {fileID: -4955662714298151723}
+  - component: {fileID: -7907518325995864400}
   m_Layer: 6
   m_Name: MinionRed
   m_TagString: RedEnemy
@@ -131,13 +132,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SplineFollow
   waypoints: []
   speed: 3
-  GhostSoundRef:
-    Guid:
-      Data1: -716727491
-      Data2: 1090145996
-      Data3: 1486258580
-      Data4: -596622928
-    Path: event:/RandomGhostSound
 --- !u!54 &-4955662714298151723
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -165,6 +159,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-7907518325995864400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4746613962481130149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -716727491
+      Data2: 1090145996
+      Data3: 1486258580
+      Data4: -596622928
+    Path: event:/RandomGhostSound
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 8
+  OverrideMaxDistance: 70
 --- !u!1 &8716142586485685106
 GameObject:
   m_ObjectHideFlags: 0
