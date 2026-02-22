@@ -72,13 +72,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SplineFollow
   waypoints: []
   speed: 3
-  GhostSoundRef:
-    Guid:
-      Data1: -716727491
-      Data2: 1090145996
-      Data3: 1486258580
-      Data4: -596622928
-    Path: event:/RandomGhostSound
 --- !u!54 &-3381499761382132044
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -117,6 +110,7 @@ GameObject:
   - component: {fileID: 2016230230659910907}
   - component: {fileID: 895631325700204710}
   - component: {fileID: 5305031404581177512}
+  - component: {fileID: 3790764210737686244}
   m_Layer: 3
   m_Name: Model
   m_TagString: Untagged
@@ -196,3 +190,17 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3790764210737686244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8716142586485685106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f58ca0a06b77e43bd730a0824762e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FaceChanger
+  sadFaceMaterial: {fileID: 2100000, guid: 4972eb7be693a684d9b48405b7ab32a2, type: 2}
+  normalFaceMaterial: {fileID: 2100000, guid: 9f55da3028a150641bbfbd62f343cf4a, type: 2}

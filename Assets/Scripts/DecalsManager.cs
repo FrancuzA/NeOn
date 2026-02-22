@@ -75,8 +75,11 @@ public class DecalsManager : MonoBehaviour
             switch (CurrentEnemy)
             {
                 case GREEN_ENEMY_STRING:
-                    if(CurrentLight == "GreenNeon") Decal.SetActive(true);
-                    Decal.GetComponent<DecalProjector>().material = DecalColors[0];
+                    if (CurrentLight == "GreenNeon")
+                    {
+                        Decal.SetActive(true);
+                    }
+                        Decal.GetComponent<DecalProjector>().material = DecalColors[0];
                     break;
                 case RED_ENEMY_STRING:
                     if (CurrentLight == "RedNeon")

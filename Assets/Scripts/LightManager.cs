@@ -51,9 +51,13 @@ public class LightManager : MonoBehaviour
     public LightType CurrentLight;
     private GameObject currentLamp;
 
-    private void Start()
+    private void Awake()
     {
         Dependencies.Instance.RegisterDependency<LightManager>(this);
+
+    }
+    private void Start()
+    {
         CurrentLight = LightType.Normal;
         currentLamp = normalLamp;
         SwapLight(CurrentLight);

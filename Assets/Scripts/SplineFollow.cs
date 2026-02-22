@@ -7,18 +7,8 @@ public class SplineFollow : MonoBehaviour
 {
     public List<Transform> waypoints = new List<Transform>();
     public float speed = 3f;
-    public EventReference GhostSoundRef;
-    private EventInstance GhostSoundInstance;
 
     private int currentPointIndex = 0;
-
-    private void OnEnable()
-    {
-        GhostSoundInstance = RuntimeManager.CreateInstance(GhostSoundRef);
-        FMODUnity.RuntimeManager.AttachInstanceToGameObject(GhostSoundInstance, this.gameObject, this.GetComponent<Rigidbody>());
-        GhostSoundInstance.start();
-        GhostSoundInstance.release();
-    }
 
     void Update()
     {
@@ -38,10 +28,5 @@ public class SplineFollow : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-    }
-
-    private void OnDestroy()
-    {
-        GhostSoundInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 }
