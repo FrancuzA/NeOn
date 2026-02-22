@@ -7576,6 +7576,10 @@ PrefabInstance:
       propertyPath: sadFacematerial
       value: 
       objectReference: {fileID: 2100000, guid: 4972eb7be693a684d9b48405b7ab32a2, type: 2}
+    - target: {fileID: 1301065891273944815, guid: f2b652328df4f4b43bfc93c994ca64a0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2771050469068069308, guid: f2b652328df4f4b43bfc93c994ca64a0, type: 3}
       propertyPath: RedNeonBar
       value: 
