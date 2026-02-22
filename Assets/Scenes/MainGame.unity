@@ -2107,7 +2107,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2797784842345612184, guid: fd98b889a60fb6d4cb45354b2cc403e1, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3939637345147080249, guid: fd98b889a60fb6d4cb45354b2cc403e1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2175,7 +2175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5125239603601826800, guid: fd98b889a60fb6d4cb45354b2cc403e1, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5831683936034228562, guid: fd98b889a60fb6d4cb45354b2cc403e1, type: 3}
       propertyPath: waypoints.Array.size
@@ -2203,11 +2203,11 @@ PrefabInstance:
       objectReference: {fileID: 286930610}
     - target: {fileID: 6210435684368958407, guid: fd98b889a60fb6d4cb45354b2cc403e1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.8
+      value: 9.07
       objectReference: {fileID: 0}
     - target: {fileID: 6210435684368958407, guid: fd98b889a60fb6d4cb45354b2cc403e1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -105.07
+      value: -88.87
       objectReference: {fileID: 0}
     - target: {fileID: 6355264315551406206, guid: fd98b889a60fb6d4cb45354b2cc403e1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2215,15 +2215,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6976991251689144757, guid: fd98b889a60fb6d4cb45354b2cc403e1, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7603226773279534630, guid: fd98b889a60fb6d4cb45354b2cc403e1, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8076494827883460625, guid: fd98b889a60fb6d4cb45354b2cc403e1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.62
+      value: 6.58
       objectReference: {fileID: 0}
     - target: {fileID: 8076494827883460625, guid: fd98b889a60fb6d4cb45354b2cc403e1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2235,7 +2235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8322584683597124255, guid: fd98b889a60fb6d4cb45354b2cc403e1, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 120626432337376388, guid: fd98b889a60fb6d4cb45354b2cc403e1, type: 3}
