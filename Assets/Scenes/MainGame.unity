@@ -119,11 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &26017219 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8277184198554797534, guid: fd98b889a60fb6d4cb45354b2cc403e1, type: 3}
-  m_PrefabInstance: {fileID: 588177265}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &54319969
 GameObject:
   m_ObjectHideFlags: 0
@@ -3842,6 +3837,10 @@ PrefabInstance:
     - target: {fileID: 8277184198554797534, guid: fd98b889a60fb6d4cb45354b2cc403e1, type: 3}
       propertyPath: m_Name
       value: SpawnPoint (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8277184198554797534, guid: fd98b889a60fb6d4cb45354b2cc403e1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8322584683597124255, guid: fd98b889a60fb6d4cb45354b2cc403e1, type: 3}
       propertyPath: m_Enabled
@@ -8717,7 +8716,6 @@ MonoBehaviour:
   allSpawners:
   - {fileID: 1755353997}
   - {fileID: 527197383}
-  - {fileID: 26017219}
   - {fileID: 91232184}
   - {fileID: 148973905}
   - {fileID: 286930609}
