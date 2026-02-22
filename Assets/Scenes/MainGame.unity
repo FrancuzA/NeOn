@@ -5020,64 +5020,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1001 &1522816386
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2313290146307118794, guid: 3fab2592bfa11b249bfc8949cf76701e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2313290146307118794, guid: 3fab2592bfa11b249bfc8949cf76701e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.4599996
-      objectReference: {fileID: 0}
-    - target: {fileID: 2313290146307118794, guid: 3fab2592bfa11b249bfc8949cf76701e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 29.894
-      objectReference: {fileID: 0}
-    - target: {fileID: 2313290146307118794, guid: 3fab2592bfa11b249bfc8949cf76701e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2313290146307118794, guid: 3fab2592bfa11b249bfc8949cf76701e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2313290146307118794, guid: 3fab2592bfa11b249bfc8949cf76701e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2313290146307118794, guid: 3fab2592bfa11b249bfc8949cf76701e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2313290146307118794, guid: 3fab2592bfa11b249bfc8949cf76701e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2313290146307118794, guid: 3fab2592bfa11b249bfc8949cf76701e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2313290146307118794, guid: 3fab2592bfa11b249bfc8949cf76701e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746613962481130149, guid: 3fab2592bfa11b249bfc8949cf76701e, type: 3}
-      propertyPath: m_Name
-      value: MinionGreen
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 8716142586485685106, guid: 3fab2592bfa11b249bfc8949cf76701e, type: 3}
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3fab2592bfa11b249bfc8949cf76701e, type: 3}
 --- !u!1 &1523517126
 GameObject:
   m_ObjectHideFlags: 0
@@ -7766,7 +7708,7 @@ SceneRoots:
   - {fileID: 864817979}
   - {fileID: 1515078697}
   - {fileID: 708856771}
-  - {fileID: 1522816386}
+  - {fileID: 2079628455}
   - {fileID: 1986416979}
   - {fileID: 223454467}
   - {fileID: 2057768366}
